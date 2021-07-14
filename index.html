@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cadastro de email na landing page para recebimento de novidades e promoções." />
+    <meta name="author" content="Cristiano Vieira de Sa Caminha" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://img.icons8.com/color/50/000000/pop-it.png" />
+    <title>POP Store</title>
+
+    <!-- font cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- function to store value in localstorage -->
+    <script type="text/javascript">
+        function store(){
+        var inputEmail= document.getElementById("email");
+        localStorage.setItem("email", inputEmail.value);
+        
+        }
+    </script>
+
+
+  </head>
+  <body>
+      
+    <!-- header section starts -->
+    <header>
+      <a href="#" class="logo"><span>POP</span>Store</a>
+
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar" class="fas fa-bars"></label>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#products">Produtos</a>
+        <a href="#footer">Contato</a>
+      </nav>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3><span>BLACK FRIDAY</span></h3>
+        <h4>Você nunca viu nada igual!!</h4>
+        <p>Cadastre-se para receber as nossas ofertas!</p>
+        <form action="">
+        <input type="email" id="email" placeholder="Digite seu e-mail" />
+        </form>
+         <a href="#" class="btn" onclick="store()">Quero me cadastrar</a>
+        
+       
+      
+        
+      </div>
+
+      <div class="image">
+        <img src="images/home-img.png" alt="" />
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- products section starts -->
+    <section class="products" id="products">
+      <h1 class="heading">Produtos</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="./images/f-icon1.png" alt="" />
+          <h3>PopIt Fidget AmongUs</h3>
+          <p>
+            O pacote inclui: 1 x alívio do estresse Este pop fidget é uma ótima
+            ferramenta sensorial.
+          </p>
+          <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="box">
+          <img src="./images/f-icon2.png" alt="" />
+          <h3>PopIt Fidget Unicórnio</h3>
+          <p>
+            Pop It fidget toy veio para ajudá-lo a reduzir a ansiedade, aliviar
+            o estresse e acalmar as emoções.
+          </p>
+          <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="box">
+          <img src="./images/f-icon3.png" alt="" />
+          <h3>PopIt Fidget Hexagonal</h3>
+          <p>
+            Ajuda a restaurar o humor. Família, idosos, crianças e adultos podem
+            jogar.
+          </p>
+          <a href="#" class="btn">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+    <!-- products section ends -->
+
+    <!-- newsletter section starts -->
+    <div class="newsletter">
+      <h3>Cadastre-se para receber as ofertas do Black Friday!</h3>
+      <p>
+        A POP Store preparou muitas promoções para você. </br> Ganhe frete
+        grátis em todas as compras no site!
+      </p>
+      <form action="">
+        <!--<input type="email" id="email" placeholder="Digite seu e-mail" />-->
+        <input type="submit"  value="Inscreva-se" onclick="location.href='#home'"/>
+      </form>
+    </div>
+    <!-- newsletter section ends -->
+
+    <!-- footer section starts -->
+    <div class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Sobre</h3>
+          <p>
+            É uma ótima ferramenta sensorial. É insípido e inofensivo para pessoas e animais de estimação. Cores brilhantes e sons agradáveis são certos para satisfazer qualquer criança!
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>Links</h3>
+          <a href="#home">Home</a>
+          <a href="#products">Produtos</a>
+          <a href="#footer">Sobre</a>
+        </div>
+
+        <div class="box">
+          <h3>Redes Sociais</h3>
+          <a href="https://www.instagram.com/criscaminhavieira/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/cristianocaminha/" target="_blank">Facebook</a>
+          <a href="https://www.linkedin.com/in/cristianocaminha/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/cvscaminha" target="_blank">GitHub</a>
+        </div>
+
+        <div class="box">
+          <h3>Contato</h3>
+          <div class="info">
+            <i class="fas fa-phone"></i>
+            <p>+55 89 99400-0000</p>
+          </div>
+          <div class="info">
+            <i class="fas fa-envelope"></i>
+            <p>nome@provedor.com.br</p>
+          </div>
+          <div class="info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Piauí, Brazil - 6480000</p>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="credit">&copy; Copyright @ 2021 ❤️ Dev { <a href="http://agenciadigitaldesign.ga" target="_blank">Cristiano Vieira</a> }</h1>
+    </div>
+    <!-- footer section ends -->
+  </body>
+</html>
