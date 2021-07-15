@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --violet: #9400d3;
-  --indigo: #4b0082;
-  --blue: #0000ff;
-  --green: #00ff00;
-  --orange: #ff7f00;
-  --red: #ff0000;
   --black: #000;
-
   --pink: #ff007c;
   --greenAmazon: #1a806f;
   --yellow: #ffff19;
@@ -33,6 +26,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   overflow-x: hidden;
 }
@@ -42,9 +36,8 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   padding: 0 9%;
-  padding-top: 7.5rem;
 }
 
 .btn {
@@ -64,9 +57,20 @@ section {
   transform: scale(1.1);
 }
 
-.heading {
+.heading-products {
   text-align: center;
   background: var(--pink);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.heading-countdown {
+  text-align: center;
+  background: var(--greenlight);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -115,7 +119,7 @@ header input {
 
 header label {
   font-size: 3rem;
-  color: var(--greenAmazon);
+  color: var(--black);
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
@@ -125,10 +129,13 @@ header label {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: url(../images/home-bg-img.png) no-repeat;
+  background: url(../assets/home-bg-img.png) no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
+  height: 100vh;
+  padding: 10rem;
+  margin-bottom: 5rem;
 }
 
 .home .image img {
@@ -147,21 +154,14 @@ header label {
   }
 }
 
-.home .content h3 {
-  font-size: 5.5rem;
-  color: #333;
-  text-transform: lowercase;
+.home .content img {
+  width: 20vw;
+  padding-top: 7rem;
 }
 
 .home .content h4 {
   font-size: 2rem;
   color: #fff;
-  text-transform: capitalize;
-}
-
-.home .content h3 span {
-  color: var(--pink);
-  text-transform: uppercase;
 }
 
 .home .content p {
@@ -172,12 +172,9 @@ header label {
 
 .home .content form {
   display: flex;
-  max-width: 70rem;
-  border: 0.2rem solid #fff;
-  padding: 0.5rem;
-  border-radius: 5rem;
-  margin: 2rem auto;
-  height: 5.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .home .content form input {
@@ -187,6 +184,61 @@ header label {
   color: #fff;
   text-transform: none;
   background: none;
+  max-width: 40rem;
+  border: 0.2rem solid #fff;
+  border-radius: 5rem;
+  margin: 1rem auto;
+  height: 5.5rem;
+}
+
+.home .content form input:focus {
+  box-shadow: inset 0 0 1rem #1a806f, 0 0 1rem #2bcfb4;
+  background: #011407;
+}
+
+.home .content form input ~ [type="submit"] {
+  background: var(--greenAmazon);
+  border: none;
+  max-width: 30rem;
+  cursor: pointer;
+}
+
+.home .content form .termos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .content form label {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 200px));
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  /*background: var(--greenAmazon);*/
+}
+
+.countdown li {
+  padding: 1rem;
+  color: var(--greenlight);
+  background: #1e1e1e;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  list-style: none;
+}
+
+.countdown li span {
+  font-size: 8rem;
+}
+
+.products {
+  padding-top: 10rem;
 }
 
 .products .box-container {
@@ -224,67 +276,11 @@ header label {
   padding-top: 1rem 0;
 }
 
-.newsletter {
-  text-align: center;
-  padding: 5rem 1rem;
-  background: url(../images/subscribe-bg.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.newsletter h3 {
-  color: #fff;
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-
-.newsletter p {
-  color: #fff;
-  font-size: 1.6rem;
-  margin: 2rem auto;
-  width: 70rem;
-}
-
-.newsletter form {
-  display: flex;
-  max-width: 70rem;
-  justify-content: center;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  margin: 2rem auto;
-  height: 5.5rem;
-}
-
-.newsletter form input {
-  padding: 0 2rem;
-  font-size: 1.7rem;
-  background: none;
-  width: 100%;
-  color: #fff;
-  text-transform: none;
-  background: none;
-}
-
-.newsletter form input[type="submit"] {
-  background: #fff;
-  color: var(--black);
-  width: 20rem;
-  font-size: 1.7rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.newsletter form input[type="submit"]:hover {
-  color: #fff;
-  background: var(--greenAmazon);
-}
-
 .footer {
-  margin-top: 10rem;
-  padding-top: 3rem;
-
-  background-size: cover;
-  background-position: center;
+  padding: 5rem;
+  margin-top: 5rem;
+  background-color: rgb(12, 12, 12);
+  text-align: center;
 }
 
 .footer .box-container {
@@ -294,7 +290,7 @@ header label {
 
 .footer .box-container .box {
   flex: 1 1 25rem;
-  margin: 2rem;
+  padding: 3rem;
 }
 
 .footer .box-container .box h3 {
@@ -309,7 +305,6 @@ header label {
   font-size: 1.5rem;
   padding: 0.5rem 0;
   color: #eee;
-  text-align: justify;
 }
 
 .footer .box-container .box a {
@@ -327,6 +322,7 @@ header label {
 .footer .box-container .box .info {
   display: flex;
   align-items: center;
+  padding-left: 6rem;
 }
 
 .footer .box-container .box .info i {
@@ -342,7 +338,7 @@ header label {
   text-align: center;
 }
 
-.footer .credit {
+.credit {
   font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: 0.1rem;
@@ -352,14 +348,41 @@ header label {
   text-align: center;
 }
 
-.footer .credit a {
+.credit a {
   color: var(--greenlight);
   /* media queries */
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.social i {
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+.social a {
+  color: #fff;
+  /* media queries */
+}
+
+.social a:hover {
+  color: var(--greenlight);
+}
+/*media queries*/
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
+  }
+
+  .home {
+    padding-top: 40rem;
+    padding-bottom: 20rem;
   }
 }
 
@@ -408,18 +431,29 @@ header label {
 
   .home {
     flex-flow: column-reverse;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
   }
 
   .home .image img {
+    margin-top: 5rem;
     width: 100%;
   }
 
   .home .content img {
-    font-size: 3.6rem;
+    width: 50vw;
+  }
+
+  .home .content h4 {
+    font-size: 3rem;
   }
 
   .home .content p {
     font-size: 1.5rem;
+  }
+
+  .countdown {
+    margin-top: 10rem;
   }
 }
 

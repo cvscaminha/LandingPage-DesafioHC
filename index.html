@@ -2,11 +2,17 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Cadastro de email na landing page para recebimento de novidades e promoções." />
+    <meta
+      name="description"
+      content="Simulação de uma Landing Page para captura de e-mail e persistência de dados no localstorage."
+    />
     <meta name="author" content="Cristiano Vieira de Sa Caminha" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="https://img.icons8.com/color/50/000000/pop-it.png" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/color/50/000000/pop-it.png"
+    />
     <title>POP Store</title>
 
     <!-- font cdn link -->
@@ -16,22 +22,10 @@
     />
 
     <!-- custom css file link -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- function to store value in localstorage -->
-    <script type="text/javascript">
-        function store(){
-        var inputEmail= document.getElementById("email");
-        localStorage.setItem("email", inputEmail.value);
-        
-        }
-    </script>
-
-
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-      
-    <!-- header section starts -->
+    <!-- header section start -->
     <header>
       <a href="#" class="logo"><span>POP</span>Store</a>
 
@@ -44,38 +38,71 @@
         <a href="#footer">Contato</a>
       </nav>
     </header>
-    <!-- header section ends -->
+    <!-- header section end -->
 
-    <!-- home section starts -->
+    <!-- home section start -->
     <section class="home" id="home">
       <div class="content">
-        <h3><span>BLACK FRIDAY</span></h3>
-        <h4>Você nunca viu nada igual!!</h4>
-        <p>Cadastre-se para receber as nossas ofertas!</p>
-        <form action="">
-        <input type="email" id="email" placeholder="Digite seu e-mail" />
-        </form>
-         <a href="#" class="btn" onclick="store()">Quero me cadastrar</a>
-        
-       
+        <figure>
+          <img
+            src="./assets/blackbriday-3d.png" alt="Promoção Black Friday"
+          />
+          <figcaption hidden>Promoção Black Friday</figcaption>
+        </figure>
+          <h4>Você nunca viu nada igual!!</h4>
+          <p>Cadastre-se para receber as nossas ofertas!</p>
       
-        
+          <form id="form">
+            <input type="text" id="nome" placeholder="Informe seu nome" required />
+            <input type="email" id="email" placeholder="Informe seu e-mail" required />
+            <label>Ao fazer o cadastro, você aceita receber promoções e novidades da POP Store.</label>
+            <input type="submit" class="btn" value="Quero me cadastrar" />
+          </form>
+            <!--<a href="#" class="btn" id="submit">Quero me cadastrar</a>-->
       </div>
-
       <div class="image">
-        <img src="images/home-img.png" alt="" />
+        <figure>
+          <img src="./assets/home-img.png" alt="PopIt Fidget" />
+          <figcaption hidden>Brinquedos PopIt Fidget</figcaption>
+        </figure>
       </div>
     </section>
+    <!-- home section end -->
 
-    <!-- home section ends -->
+    <!-- countdown section start -->
+    <section>
+      <h1 class="heading-countdown">Contagem regressiva</h1>
+      <div>
+        <ul class="countdown">
+          <li>
+            <span data-time></span>
+            <div>dia(s)</div>
+          </li>
+          <li>
+            <span data-time></span>
+            <div>hora(s)</div>
+          </li>
+          <li>
+            <span data-time></span>
+            <div>minutos</div>
+          </li>
+          <li>
+            <span data-time></span>
+            <div>segundos</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- countdown section end -->
 
-    <!-- products section starts -->
+
+    <!-- products section start -->
     <section class="products" id="products">
-      <h1 class="heading">Produtos</h1>
+      <h1 class="heading-products">Produtos</h1>
 
       <div class="box-container">
         <div class="box">
-          <img src="./images/f-icon1.png" alt="" />
+          <img src="./assets/f-icon1.png" alt="" />
           <h3>PopIt Fidget AmongUs</h3>
           <p>
             O pacote inclui: 1 x alívio do estresse Este pop fidget é uma ótima
@@ -85,7 +112,7 @@
         </div>
 
         <div class="box">
-          <img src="./images/f-icon2.png" alt="" />
+          <img src="./assets/f-icon2.png" alt="" />
           <h3>PopIt Fidget Unicórnio</h3>
           <p>
             Pop It fidget toy veio para ajudá-lo a reduzir a ansiedade, aliviar
@@ -95,7 +122,7 @@
         </div>
 
         <div class="box">
-          <img src="./images/f-icon3.png" alt="" />
+          <img src="./assets/f-icon3.png" alt="" />
           <h3>PopIt Fidget Hexagonal</h3>
           <p>
             Ajuda a restaurar o humor. Família, idosos, crianças e adultos podem
@@ -105,29 +132,18 @@
         </div>
       </div>
     </section>
-    <!-- products section ends -->
 
-    <!-- newsletter section starts -->
-    <div class="newsletter">
-      <h3>Cadastre-se para receber as ofertas do Black Friday!</h3>
-      <p>
-        A POP Store preparou muitas promoções para você. </br> Ganhe frete
-        grátis em todas as compras no site!
-      </p>
-      <form action="">
-        <!--<input type="email" id="email" placeholder="Digite seu e-mail" />-->
-        <input type="submit"  value="Inscreva-se" onclick="location.href='#home'"/>
-      </form>
-    </div>
-    <!-- newsletter section ends -->
+    <!-- products section end -->
 
-    <!-- footer section starts -->
-    <div class="footer" id="footer">
+    <!-- footer section start -->
+    <section class="footer" id="footer">
       <div class="box-container">
         <div class="box">
           <h3>Sobre</h3>
           <p>
-            É uma ótima ferramenta sensorial. É insípido e inofensivo para pessoas e animais de estimação. Cores brilhantes e sons agradáveis são certos para satisfazer qualquer criança!
+            É uma ótima ferramenta sensorial. É insípido e inofensivo para
+            pessoas e animais de estimação. Cores brilhantes e sons agradáveis
+            são certos para satisfazer qualquer criança!
           </p>
         </div>
 
@@ -138,14 +154,7 @@
           <a href="#footer">Sobre</a>
         </div>
 
-        <div class="box">
-          <h3>Redes Sociais</h3>
-          <a href="https://www.instagram.com/criscaminhavieira/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/cristianocaminha/" target="_blank">Facebook</a>
-          <a href="https://www.linkedin.com/in/cristianocaminha/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/cvscaminha" target="_blank">GitHub</a>
-        </div>
-
+       
         <div class="box">
           <h3>Contato</h3>
           <div class="info">
@@ -162,9 +171,43 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <h1 class="credit">&copy; Copyright @ 2021 ❤️ Dev { <a href="http://agenciadigitaldesign.ga" target="_blank">Cristiano Vieira</a> }</h1>
-    </div>
-    <!-- footer section ends -->
+    <section>
+      <h1 class="credit">
+        &copy; Copyright @ 2021 ❤️ Dev {
+        <a href="http://agenciadigitaldesign.ga" target="_blank"
+          >Cristiano Vieira</a
+        >
+        }
+      </h1>
+
+      <div class="social">
+          <div>
+          <a href="https://www.instagram.com/criscaminhavieira/" target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i></i
+          ></a>
+          </div>
+          <div>
+          <a href="https://www.facebook.com/cristianocaminha/" target="_blank"
+            ><i class="fab fa-facebook-square fa-2x" ></i></a
+          >
+          </div>
+          <div>
+          <a
+            href="https://www.linkedin.com/in/cristianocaminha/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in fa-2x"></i></a
+          >
+          </div>
+          <div>
+          <a href="https://github.com/cvscaminha" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+    </section>
+
+    <!-- footer section end -->
   </body>
+  <script type="module" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/storage.js"></script>
 </html>
