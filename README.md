@@ -31,3 +31,9 @@ Entregáveis:
 -Cadastre seu e-mail para receber promoções
 
 -Dados no localstorage
+<<<<<<< HEAD
+=======
+
+
+LINK: https://popstore.netlify.app/
+>>>>>>> 7b53b86b2aeb9d8bb4eb1c46c8ab036f44f3e5bd
