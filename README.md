@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Pop Store" src="https://github.com/cvscaminha/LandingPage-DesafioHC/blob/master/modelo.png" width="100%">
+  <img alt="Pop Store" src="https://github.com/cvscaminha/LandingPage-DesafioHC/tree/main/assets/modelo.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -24,16 +24,10 @@ Descrição: Criar um sistema de e-commerce para cadastro de email na landing pa
 
 Entregáveis:
 
--Template do site oficial
+- Template do site oficial
 
--Landing page de promoções, estilo black friday;
+- Landing page de promoções, estilo black friday;
 
--Cadastre seu e-mail para receber promoções
+- Cadastre seu e-mail para receber promoções
 
--Dados no localstorage
-<<<<<<< HEAD
-=======
-
-
-LINK: https://popstore.netlify.app/
->>>>>>> 7b53b86b2aeb9d8bb4eb1c46c8ab036f44f3e5bd
+- Dados no localstorage
