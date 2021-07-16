@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Pop Store" src="https://github.com/cvscaminha/LandingPage-DesafioHC/tree/main/assets/modelo.png" width="100%">
+  <img alt="Pop Store" src="https://raw.githubusercontent.com/cvscaminha/LandingPage-DesafioHC/main/assets/modelo.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
